@@ -1,0 +1,55 @@
+// ====== Сброс кнопки
+.button
+	noselect()
+	margin 0
+	padding 0
+
+	display inline-block
+	vertical-align top
+
+	font-family inherit
+	font-weight normal
+	line-height inherit
+	text-align center
+	text-decoration none
+	color inherit
+
+	background none
+	border none
+	box-shadow none
+
+	cursor pointer
+
+	&:focus
+	&:active
+		outline none
+		text-decoration none
+		background-image none
+
+	&__icon
+	&__text
+		display inline-block
+		vertical-align middle
+
+	&__icon + &__text
+	&__text + &__icon
+		margin-left 1em
+
+
+// ====== Базовые модификаторы
+
+.button.button_block
+	display block
+	width 100%
+
+.button.button_pill
+	border-radius 100px
+
+
+// ====== Стили
+
+.button.button_main
+	color #fff
+	background-color blue
+	&:hover
+		background-color blue + tone

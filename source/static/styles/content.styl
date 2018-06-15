@@ -1,0 +1,129 @@
+.content
+	clearfix()
+
+	// ====== Основное
+
+	img
+		max-width 100% !important
+		height auto !important
+
+	p
+		margin-bottom 1em
+
+	// ====== Заголовки
+
+	h1
+	h2
+	h3
+	h4
+	h5
+	h6
+		margin-bottom 0.5em
+		font-weight inherit
+		color inherit
+
+	h1
+		font-size 2em
+
+	h2
+		font-size 1.5em
+
+	h3
+		font-size 1.2em
+
+	h4
+		font-size 1em
+
+	h5
+		font-size 0.8em
+
+	h6
+		font-size 0.6em
+
+	// ====== Списки
+
+	ul
+	ol
+		margin-bottom 1em
+
+	ol
+		counter-reset section
+
+	ul ul,
+	ul ol,
+	ol ol,
+	ol ul
+		padding-left 1.5em
+		margin 0.5em 0
+
+	li
+		margin-bottom 0.5em
+
+	ul > li
+		&::before
+			margin-top 0.5em
+			margin-right 0.5em
+			content ''
+			display inline-block
+			vertical-align top
+			width 0.5em
+			height 0.5em
+			background-color #08c
+			border-radius 50%
+
+	ol > li
+		&::before
+			margin-right 0.5em
+			counter-increment section
+			content counters(section, '.') '.'
+			display inline-block
+			vertical-align top
+			color #08c
+
+	// ====== Таблицы
+
+	table
+		margin-bottom 1em
+
+	tbody tr
+		&:nth-child(even)
+			background-color #f0f0f0
+
+	th
+	td
+		padding 0.5em 1em
+
+	thead
+	tfoot
+		color #fff
+		background-color #08c
+
+	// ====== Остальное
+
+	blockquote
+		margin 1em
+		padding 0.5em 1em
+		font-size 1.2em
+		font-style normal
+		border-left 4px solid #08c
+
+	blockquote p
+		margin 0
+
+	hr
+		margin-bottom 1em
+		border none
+		border-bottom 1px solid #000
+
+	address
+		font-style italic
+
+	pre
+		margin 0
+		margin-bottom 1em
+		font-family monospace
+		background-color #08c
+		padding 5px 10px
+
+	iframe
+		border none

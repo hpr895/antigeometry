@@ -1,0 +1,10 @@
+{
+    "project": {
+        "name": "Проект",
+        "lang": "ru"
+    },
+
+    "pages": [
+        {"url": "home", "title": "Главная"}
+    ]
+}

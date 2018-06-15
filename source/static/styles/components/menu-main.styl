@@ -1,0 +1,34 @@
+.menu-main
+	clearfix()
+	color #fff
+	&__item
+		display inline-block
+		float left
+		position relative
+		&:hover
+			& ^[0]__submenu
+				display block
+	&__link
+		display inline-block
+		padding 20px 10px
+		&:hover
+			background-color #555
+	&__submenu
+		position absolute
+		left 0
+		top 100%
+		z-index 10
+		display none
+
+.menu-main-submenu
+	white-space nowrap
+	border 1px solid #444
+	background-color #fff
+	color #444
+	&__item
+		//
+	&__link
+		display block
+		padding 10px
+		&:hover
+			background-color #eee

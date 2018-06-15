@@ -1,0 +1,86 @@
+include /_base/_app
+
+doctype html
+html(lang=project.lang)
+	head
+		title Список страниц – #{project.name}
+		meta(charset="utf-8")
+
+	style
+		:stylus
+			body
+				background-color #fff
+				margin 0
+				padding 0
+			.pages-list
+				padding 40px 55px
+				max-width 700px
+				font-size 0
+				&__title
+					margin 0
+					margin-bottom 20px
+					font-family arial
+					font-size 30px
+					font-weight normal
+				&__list
+					padding 0
+					margin 0
+					list-style none
+				&__item
+					margin 0 0 10px 0
+					font-family arial
+					&:after
+						content ''
+						display table
+						clear both
+				&__link
+					&
+					&:hover
+					&:active
+					&:visited
+						display inline-block
+						vertical-align bottom
+						font-size 14px
+						text-decoration underline
+						color #290656
+					&:hover
+						text-decoration none
+						color #374EC5
+				&__spacer
+				&__url
+					vertical-align bottom
+					margin 0
+					margin-left 10px
+					display inline-block
+					font-family georgia
+					font-size 12px
+					font-style italic
+					color #999
+
+			@media screen and (max-width: 640px)
+				.pages-list
+					padding 20px
+					&__title
+						padding-left 8px
+					&__item
+						padding 0
+					&__spacer
+						padding 10px 0
+					&__url
+						padding 10px
+					&__link
+						&
+						&:hover
+						&:active
+						&:visited
+							padding 10px
+
+	body.page
+		+b.pages-list
+			+e.H1.title= project.name
+			+e.UL.list
+				each item in pages
+					+e.LI.item
+						+e.A(href=item.url + ".html").link= item.title
+						+e.SPAN.spacer —
+						+e.SPAN.url= item.url + ".html"

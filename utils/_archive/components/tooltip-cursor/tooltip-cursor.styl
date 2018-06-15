@@ -1,0 +1,17 @@
+.js-tooltip-cursor
+	&:hover
+		& .js-tooltip-cursor-content
+			display block
+	& .js-tooltip-cursor-content
+		cursor default
+		transition none !important
+		position fixed
+		top 0
+		left 0
+		z-index 1000000
+		display none
+		padding 5px 10px
+		max-width 300px
+		background-color #fff
+		border 1px solid #000
+		box-shadow $bxsh

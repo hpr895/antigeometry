@@ -1,0 +1,23 @@
++b.SECTION.section
+	+e.wrapper.wrapper
+
+		+b.inner-page
+			+e.top
+				+e.breadcrumb
+					//- include /breadcrumb
+				+e.title
+					+b.page-title Заголовок страницы
+
+			+e.main
+				+e.left
+					//- include /sidebar
+
+				+e.right
+					+e.content
+						//- include /content
+
+					+e.back
+						a(href="#").go-back Вернуться
+
+					+e.bottom
+						//- include /share

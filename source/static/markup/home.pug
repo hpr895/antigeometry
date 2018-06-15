@@ -1,0 +1,25 @@
+include /_base/_app
+
+doctype html
+html(lang=project.lang).no-js
+	head
+		+auto-title(fileName)
+		include /_base/meta-head
+
+	body
+		+b.page
+			+e.header
+				include /header
+
+			+e.main
+
+				+b.SECTION.section
+					+e.wrapper.wrapper
+						| Контент
+
+			+e.footer
+				include /footer
+
+		include /mobile
+
+		include /_base/scripts

@@ -1,0 +1,28 @@
+// ====== Подключение шрифтов
+//
+// 1. Имена папок должны быть написаны исключительно латиницей без пробелов и любых других символов
+// 2. Файлы шрифтов пишутся строчными буквами с постфиксом через минус
+// 3. Формат шрифта подключать один, если формат "ttf", "otf" или лучше всего "woff"
+// (смотря какой будет в макете или легче найти, т.к шрифты должны прилагаться дизайнером)
+//
+// Примеры: "fonts/roboto/roboto-regular.ttf", "fonts/helveticanuecondensed/helveticanuecondensed-bold.woff"
+
+// ====== roboto
+@font-face
+	font-family 'roboto'
+	src url('../fonts/roboto/roboto-regular.ttf')
+
+@font-face
+	font-family 'roboto'
+	src url('../fonts/roboto/roboto-bold.ttf')
+	font-weight bold
+
+@font-face
+	font-family 'roboto'
+	src url('../fonts/roboto/roboto-italic.ttf')
+	font-style italic
+
+@font-face
+	font-family 'roboto'
+	src url('../fonts/roboto/roboto-light.ttf')
+	font-weight 200

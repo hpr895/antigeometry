@@ -1,0 +1,30 @@
+// Сброс плавающего потока и схлопывания внешних отступов дочерних элементов
+clearfix()
+	&::before
+	&::after
+		content ''
+		display table
+		clear both
+
+// Запрет на выделение элемента
+noselect()
+	-webkit-user-select none
+	-moz-user-select none
+	-ms-user-select none
+
+// Плейсхолдер для инпутов
+placeholder()
+	&::-webkit-input-placeholder
+		{block}
+	&::-moz-placeholder
+		{block}
+	&:-ms-input-placeholder
+		{block}
+
+// Алиас для состояний ссылки
+link()
+	&
+	&:hover
+	&:active
+	&:visited
+		{block}
