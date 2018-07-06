@@ -97,7 +97,7 @@ $ gulp export
 #### /utils/bemto
 Плагин, который при вёрстке на pug позволяет писать по БЭМ легко и быстро: [bemto](https://github.com/kizu/bemto).
 \
-Ещё есть плагин на "Sublime Text 3" для быстрого преобразования pug-bemto в stylus: [bemto_to_stylus](https://github.com/weltkind-dmitry-savinkov/bemto_to_stylus)
+В помощь я сделал плагин на Sublime Text 3 для быстрого преобразования pug-bemto в stylus: [bemto_to_stylus](https://github.com/hpr895/bemto_to_stylus)
 
 ## Основано на сборщиках:
 [Zoxon - Gulp Front](https://github.com/zoxon/gulp-front)
