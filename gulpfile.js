@@ -37,7 +37,7 @@ var imagemin     = require('gulp-imagemin');
 
 
 
-//////////////// Исходники для компиляции
+//////////////// Опции
 
 var options = {
     minifyStyles: true,
@@ -254,7 +254,7 @@ function swallowError(error) {
     this.emit('end');
 }
 
-// Чистка
+// Чистка перед сборкой
 gulp.task('clear', function() {
     del.sync('dest');
 });
@@ -263,7 +263,7 @@ gulp.task('clear', function() {
 
 //////////////// Выполнение
 
-// Стандартныая команда с сервером
+// Стандартная команда с сервером
 gulp.task('default', ['export'], function() {
 
     // Сервер

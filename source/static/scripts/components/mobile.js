@@ -1,5 +1,6 @@
 // Мобильная панель
 var mobilePanel = (function() {
+    var $base = document.documentElement;
     var $panel = document.querySelector('.js-mobile');
     var $overlay;
     var animationSpeed = 200;
@@ -74,11 +75,15 @@ var mobilePanel = (function() {
     }
 
     function hideScrollbar() {
-        document.documentElement.style.overflow = 'hidden';
+        $base.style.overflow = 'hidden';
     }
 
     function showScrollbar() {
-        document.documentElement.style.overflow = '';
+        $base.style.overflow = '';
+
+        if ($base.getAttribute('style') === '') {
+            $base.removeAttribute('style');
+        }
     }
 
     init();
