@@ -1,0 +1,135 @@
+form(action="#")
+	.form-theme
+		br
+		strong Тема формы 1
+		br
+		br
+		input(type="text" placeholder="Введите имя" required)
+		br
+		input(type="password" placeholder="Введите пароль" required)
+		br
+		+b.LABEL.checkbox
+			input(type="checkbox")
+			+e.dot
+			+e.content Запомнить
+		br
+		br
+		+b.BUTTOn(type="submit").button_main Отправить
+
+br
+br
+
+form(action="#")
+	.form-theme-2
+		br
+		strong Тема формы 2
+		br
+		br
+		input(type="text" placeholder="Введите имя" required)
+		br
+		input(type="password" placeholder="Введите пароль" required)
+		br
+		+b.LABEL.checkbox
+			input(type="checkbox")
+			+e.dot
+			+e.content Запомнить
+		br
+		br
+		+b.BUTTOn(type="submit").button_alt Отправить
+
+br
+br
+
+strong Форма без темы
+form(action="#")
+	fieldset
+		legend Элементы формы
+
+		label Текст
+		input(type="text" placeholder="Введите текст")
+
+		label Пароль
+		input(type="password")
+
+		label Число
+		input(type="number")
+
+		label Текстовое поле
+		textarea(placeholder="Введите текст")
+
+		br
+
+		label Файл
+		input(type="file")
+
+		br
+
+		label Селект
+		select
+			option Элемент 1
+			option Элемент 2
+			option Элемент 3
+			option Элемент 4
+			option Элемент 5
+
+		br
+
+		label Мультиселект
+		select(multiple)
+			option Элемент 1
+			option Элемент 2
+			option Элемент 3
+			option Элемент 4
+			option Элемент 5
+
+		br
+
+		label Чекбокс на чистом CSS
+		br
+		+b.LABEL.checkbox
+			input(type="checkbox")
+			+e.dot
+			+e.content Точка слева
+
+		br
+		+b.LABEL.checkbox
+			+e.content Точка справа
+			input(type="checkbox")
+			+e.dot
+
+		br
+		br
+
+		label Радиокнопка на чистом CSS
+		br
+		+b.LABEL.radio
+			input(type="radio" name="radio_pure")
+			+e.dot
+			+e.content Точка слева
+
+		br
+		+b.LABEL.radio
+			+e.content Точка справа
+			input(type="radio" name="radio_pure")
+			+e.dot
+
+		br
+		br
+
+		label range
+		input(type="range" min="0" max="100" value="50" step="1")
+		br
+		br
+		label color
+		input(type="color")
+		br
+		br
+		label buttons
+		br
+
+		//- Используем именно тег "button" для гибкости
+		button(type="submit") Отправить
+		button(type="reset") Сбросить
+
+br
+br

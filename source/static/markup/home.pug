@@ -15,11 +15,12 @@ html(lang=project.lang).no-js
 
 				+b.SECTION.section
 					+e.wrapper.wrapper
-						| Контент
+						//- Демонстрация формы
+						include /form-demo
 
 			+e.footer
 				include /footer
 
-		include /mobile
+		include /mobile-panel
 
 		include /_base/scripts

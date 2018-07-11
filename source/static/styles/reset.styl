@@ -3,8 +3,10 @@
 @import 'components/_base/_mixins'
 
 
-// ====== Сброс элементов
+// Хэлперы и шрифты в конце
 
+
+// ====== Сброс элементов
 html
 body
 	margin 0
@@ -41,7 +43,6 @@ menu
 
 
 // ===== Сброс типографии для семантической вёрстки
-
 h1
 h2
 h3
@@ -105,12 +106,11 @@ address
 
 
 // ====== Сброс форм
-
 fieldset
 	margin 0
 	padding 0
 	border 1px solid #000
-	padding 1em
+	padding 0.5em 1em
 
 legend
 	padding 0 0.25em
@@ -118,7 +118,7 @@ legend
 
 select
 	margin 0
-	padding 0 0.5em
+	padding 0.5em
 	display block
 	font-family inherit
 	font-size inherit
@@ -129,6 +129,9 @@ select
 	box-shadow none
 	cursor pointer
 
+select[multiple]
+	height auto
+
 option
 	padding 0.5em
 	font-family inherit
@@ -136,8 +139,7 @@ option
 
 
 // ====== Поля
-
-.field
++fields()
 	margin 0
 	padding 0.5em 0.75em
 	display block
@@ -155,12 +157,11 @@ option
 	+placeholder()
 		opacity 1
 		letter-spacing inherit
-		color #888
+		color #000
 
-textarea.field
+textarea
 	height 8em
-	min-height 8em
-	resize vertical
+	resize none
 
 input[type="checkbox"]
 input[type="radio"]
@@ -187,107 +188,82 @@ input[type="file"]
 	cursor pointer
 
 
-// ====== Чекбокс и радиокнопка на чистом CSS
-// Здесь ничего не нужно трогать, а только наследовать в "forms.styl" через тему формы
-
-.checkbox
+// ====== Диапазон
+input[type="range"]
+input[type="range"]:focus
+	padding 0
+	margin 0
+	height 16px
 	position relative
-	display inline-block
+	width 100%
 	cursor pointer
-	-webkit-user-select none
-	-moz-user-select none
-	-ms-user-select none
+	box-shadow none
+	-webkit-appearance none
+	background-color transparent
+	outline none
 
-	& input[type='checkbox']
-		margin 0
-		position absolute
-		z-index -10
-		opacity 0
+input[type="range"]::-moz-range-thumb
+	box-shadow none
+	width 12px
+	height 12px
+	border-radius 0
+	background-color #fff
+	border 1px solid #444
+	border-radius 50%
 
-	& input[type='checkbox']:checked + ^[0]__dot::before
-		display block
+input[type="range"]::-moz-range-track
+	height 4px
+	background-color #ccc
 
-	&__dot
-		position relative
-		display inline-block
-		vertical-align top
-		width 20px
-		height 20px
-		border 1px solid #000
-		cursor pointer
+input[type="range"]::-moz-range-progress
+	height 4px
+	background-color #444
 
-		&::before
-			content ''
-			position absolute
-			display none
-			z-index 1
-
-			// === Как сделать галочку (подсказка)
-			top 4px
-			left 3px
-			width 12px
-			height 8px
-			border 1px solid #000
-			border-width 0 0 2px 2px
-			transform rotate(-45deg)
-
-			// === Как сделать точку (подсказка)
-			// top 2px
-			// left 2px
-			// width 14px
-			// height 14px
-			// background-color #000
-
-	&__content
-		margin 0 0.15em
-		display inline-block
-		vertical-align top
-
-.radio
-	position relative
-	display inline-block
+input[type="range"]::-webkit-slider-thumb
+	width 12px
+	height 12px
+	margin-top -4px
 	cursor pointer
-	-webkit-user-select none
-	-moz-user-select none
-	-ms-user-select none
+	border none
+	border-radius 50%
+	background-color #fff
+	border 1px solid #000
+	-webkit-appearance none
 
-	& input[type='radio']
-		margin 0
-		position absolute
-		z-index -10
-		opacity 0
+input[type="range"]::-webkit-slider-runnable-track
+	height 4px
+	background-color #ccc
 
-	& input[type='radio']:checked + ^[0]__dot::before
-		display block
+input[type="range"]::-webkit-slider-runnable-track:after
+	height 4px
+	background-color red
 
-	&__dot
-		position relative
-		margin-right 0.15em
-		display inline-block
-		vertical-align top
-		width 20px
-		height 20px
-		border 1px solid #000
-		cursor pointer
-		border-radius 100px
+input[type="range"]::-ms-thumb
+	width 12px
+	height 12px
+	cursor pointer
+	border 1px solid #000
+	border-radius 55px
+	background-color #fff
+	border-radius 50%
 
-		&::before
-			content ''
-			display none
-			position absolute
-			top 2px
-			left 2px
-			width 14px
-			height 14px
-			border-radius 100px
-			background-color #000
+input[type="range"]::-ms-track
+	height 4px
+	color transparent
+	border none
+	background transparent
+	background-color #ccc
+	box-shadow none
 
-	&__content
-		margin 0 0.15em
-		display inline-block
-		vertical-align top
+input[type="range"]::-ms-fill-lower
+	height 4px
+	background-color #444
+
+input[type="range"]::-ms-fill-upper
+	height 4px
+	background-color #ccc
 
 
-// ====== Основные классы и настройки
+// ====== Хелперы и шрифты
 @import 'components/_base/helpers'
 @import 'components/_base/fonts'

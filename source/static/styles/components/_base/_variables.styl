@@ -13,25 +13,28 @@ neutral = #888
 dark    = #444
 black   = #000
 
-// Один HEX тон - к примеру от цвета 000 до 111. Работает и с rgba()
+// Один HEX тон (к примеру от цвета 000 до 111)
 tone = 17
 
 
-// ====== Стандартная "transition-timing-function"
-$ttf = 200ms ease-in-out 0ms
+// ====== Размер шрифта
+$baseFontSize = 16px
 
 
-// ====== Медиа размеры
+// Стандартная "transition-timing-function"
+$timing = 200ms ease-in-out 0ms
+
+
+// ====== Боковые отступы у впаррепа
+$sidePadding = 10px
+
+
+// ====== Медиа размеры (учитываем $sidePadding)
+$large   = 1920px
 $desktop = 1200px
 $tablet  = 720px
 $mobile  = 320px
 
 
-// ====== Боковой отступ у враппера
-$wrapper-padding   = 10px
-
-
-// ====== Сетка
-$components-grid    = false
-$grid-cols-num      = 12
-$grid-extra-padding = 0
+// ====== Количество колонок сетки
+$columnsCount = 12

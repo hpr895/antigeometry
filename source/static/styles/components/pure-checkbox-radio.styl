@@ -1,0 +1,98 @@
+// ====== Чекбокс и радиокнопка на чистом CSS
+// Здесь желательно ничего не нужно трогать,
+// а наследовать через тему формы в файле "form-theme.styl"
+.checkbox
+	noselect()
+	position relative
+	display inline-block
+	cursor pointer
+
+	& input[type='checkbox']
+		margin 0
+		position absolute
+		z-index -10
+		opacity 0
+
+	& input[type='checkbox']:checked + ^[0]__dot::before
+		display block
+
+	&__dot
+		position relative
+		margin-right 0.25em
+		display inline-block
+		vertical-align top
+		width 20px
+		height 20px
+		border 1px solid #000
+		cursor pointer
+
+		&::before
+			content ''
+			position absolute
+			display none
+			z-index 1
+
+			// === Как сделать точку
+			top 2px
+			left 2px
+			width 14px
+			height 14px
+			background-color #000
+
+			// === Как сделать галочкуточку
+			// top 5px
+			// left 4px
+			// width 10px
+			// height 6px
+			// border 1px solid #000
+			// border-width 0 0 2px 2px
+			// transform rotate(-45deg)
+
+	&__content
+		margin-right 0.25em
+		display inline-block
+		vertical-align top
+
+.radio
+	position relative
+	display inline-block
+	cursor pointer
+	-webkit-user-select none
+	-moz-user-select none
+	-ms-user-select none
+
+	& input[type='radio']
+		margin 0
+		position absolute
+		z-index -10
+		opacity 0
+
+	& input[type='radio']:checked + ^[0]__dot::before
+		display block
+
+	&__dot
+		position relative
+		margin-right 0.15em
+		display inline-block
+		vertical-align top
+		width 20px
+		height 20px
+		border 1px solid #000
+		cursor pointer
+		border-radius 100px
+
+		&::before
+			content ''
+			display none
+			position absolute
+			top 2px
+			left 2px
+			width 14px
+			height 14px
+			border-radius 100px
+			background-color #000
+
+	&__content
+		margin 0 0.15em
+		display inline-block
+		vertical-align top

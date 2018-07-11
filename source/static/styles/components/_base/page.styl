@@ -1,12 +1,37 @@
 // Основа
 body
 	font-family 'roboto', 'arial'
-	font-size 16px
-	line-height 1.4
+	font-size $baseFontSize
+	line-height 1.5
 	color #000
 
+// Настройка ссылки
+a
+	color inherit
+	text-decoration none
+
+	&.underlined
+		text-decoration underline
+		&:hover
+			text-decoration none
+
+	&.hover-underlined
+		&:hover
+			text-decoration underline
+
+// Выделение текста
+::-moz-selection
+	text-shadow none
+	background-color blue
+	color #fff
+
+::selection
+	text-shadow none
+	background-color blue
+	color #fff
+
 // Страница и прижатие футера
-// Наследуемся именно через ".cssall", так как в IE 11 существуют баги при рендеринге флексбоксов
+// Наследуемся именно через ".cssall", так как в IE присутствуют баги при рендеринге флексбоксов
 .page
 	min-height 100%
 	.cssall &
@@ -20,10 +45,9 @@ body
 .wrapper
 	clearfix()
 	margin auto
-	padding 0 $wrapper-padding
+	padding 0 $sidePadding
 	width 100%
 	max-width $desktop
-	min-width $mobile
 	+below($desktop)
 		width $tablet
 	+below($tablet)

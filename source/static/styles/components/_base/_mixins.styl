@@ -28,3 +28,38 @@ link()
 	&:active
 	&:visited
 		{block}
+
+// Селекторы инпутов полей
+fields()
+	input[type="text"]
+	input[type="password"]
+	input[type="email"]
+	input[type="tel"]
+	input[type="url"]
+	input[type="number"]
+	input[type="search"]
+	textarea
+		{block}
+
+// Сетка
+// База для ряда
+row()
+	font-size 0
+	margin-left (- $sidePadding)
+	margin-right (- $sidePadding)
+
+// База для элемента
+col()
+	padding 0 $sidePadding
+	display inline-block
+	vertical-align top
+	font-size $baseFontSize
+
+// Ширина элемента в соотношении к сетке
+col-width(colWidth = 6)
+	width (100 / $columnsCount) * colWidth + '%'
+
+// Сброс колонки
+col-full()
+	display block
+	width 100%

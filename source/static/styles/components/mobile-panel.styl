@@ -8,27 +8,27 @@
 	background-color rgba(0, 0, 0, 0.3)
 	display none
 	opacity 0
-	transition opacity $ttf
+	transition opacity $timing
 	&.is-visible
 		opacity 1
 
-.mobile
+.mobile-panel
 	// Переменная ширины из '_variables'
-	$mobile-width = $mobile
+	$panel-width = $mobile
 
 	position fixed
 	top 0
-	right - $mobile-width
+	right - $panel-width
 	z-index 105
 	width 100%
-	max-width $mobile-width
+	max-width $panel-width
 	height 100%
 	background-color #444
 	color #fff
-	transition transform $ttf
+	transition transform $timing
 	overflow-y auto
 	&.is-opened
-		transform translateX(- $mobile-width)
+		transform translateX(- $panel-width)
 	&__close
 		position relative
 		width 45px

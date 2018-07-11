@@ -1,0 +1,54 @@
+// Инпуты
+
+// Наследуем стили элементов формы через селектор "form-theme".
+// Таким образом, если в дизайне у форм будет две разные темы,
+// просто дублируем необходимые классы и называем их "form-theme-2".
+//
+// При таком наследовании будет соблюдаться ясность в стилизации
+// сколь угодного количества различных по дизайну форм.
+// Все темы форм будут наследоваться от первоначальной.
+
+
+// ====== Theme 1
+.form-theme
+	+fields()
+		padding 10px
+		color blue
+		border-color blue
+		border-radius 2px
+
+		+placeholder()
+			color blue
+
+	.checkbox
+		color blue
+
+	.checkbox__dot
+		border-color blue
+
+	.checkbox__dot::before
+		background-color blue
+
+// ====== Theme 2
+.form-theme-2
+	+fields()
+		border none
+		background-color #f0f0f0
+
+		+placeholder()
+			color #000
+
+	.checkbox__dot
+		border-color #000
+
+	.checkbox__dot::before
+		border-color #000
+
+		top 5px
+		left 4px
+		width 10px
+		height 6px
+		border 1px solid #000
+		background-color transparent
+		border-width 0 0 2px 2px
+		transform rotate(-45deg)

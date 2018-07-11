@@ -1,6 +1,6 @@
 // jQuery - Мобильное меню
-var menuMobile = (function() {
-    var $trigger = $('.menu-mobile__arrow');
+var mobileMenu = (function() {
+    var $trigger = $('.mobile-menu__arrow');
     var animationSpeed = 200;
 
     // Mobile menu

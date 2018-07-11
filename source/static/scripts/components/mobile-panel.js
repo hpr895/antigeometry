@@ -1,7 +1,7 @@
 // Мобильная панель
 var mobilePanel = (function() {
     var $base = document.documentElement;
-    var $panel = document.querySelector('.js-mobile');
+    var $panel = document.querySelector('.js-mobile-panel');
     var $overlay;
     var animationSpeed = 200;
 
@@ -13,7 +13,7 @@ var mobilePanel = (function() {
     function events() {
         // Триггеры открытия
         (function() {
-            var el = document.querySelectorAll('.js-mobile-open');
+            var el = document.querySelectorAll('.js-mobile-panel-open');
             if (el.length) {
                 for(var i = 0; i < el.length; i++) {
                     el[i].addEventListener('click', openAction);
@@ -23,7 +23,7 @@ var mobilePanel = (function() {
 
         // Триггеры закрытия
         (function() {
-            var el = document.querySelectorAll('.js-mobile-close');
+            var el = document.querySelectorAll('.js-mobile-panel-close');
             if (el.length) {
                 for(var i = 0; i < el.length; i++) {
                     el[i].addEventListener('click', closeAction);
