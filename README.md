@@ -99,6 +99,9 @@ $ gulp export
 \
 В помощь я сделал плагин на Sublime Text 3 для быстрого преобразования pug-bemto в stylus: [bemto_to_stylus](https://github.com/hpr895/bemto_to_stylus)
 
+## Демонстрация в проекте
+Изначально в проекте реализован модуль мобильной панели с меню и демонстрация того, как стилизовать формы, разделяя их по темам.
+
 ## Основано на сборщиках:
 [Zoxon - Gulp Front](https://github.com/zoxon/gulp-front)
 \
