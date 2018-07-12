@@ -1,6 +1,8 @@
 # Antigeometry
 Фронт-энд сборщик на **gulp** + **pug** + **stylus**
 
+[Демонстрация](http://html.web.weltkind.ru/antigeometry/home.html)
+
 ## Установка
 ### Изначальная
 - Установить Node.js
