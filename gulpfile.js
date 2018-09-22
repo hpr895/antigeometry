@@ -279,8 +279,8 @@ gulp.task('default', ['export'], function() {
     gulp.watch('source/static/markup/_config.json', ['markup']);
     gulp.watch('dest/*.html').on('change', browserSync.reload);
 
+    // При изменении стилей браузер не нужно обновлять, он их сам быстро подхватит
     gulp.watch('source/static/styles/**/*.styl', ['styles']);
-    gulp.watch('dest/css/*.css').on('change', browserSync.reload);
 
     gulp.watch('source/static/scripts/**/*.js', ['scripts']);
     gulp.watch('dest/js/*.js').on('change', browserSync.reload);
