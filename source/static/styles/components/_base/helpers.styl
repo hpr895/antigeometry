@@ -28,31 +28,3 @@
 		padding-bottom 56.25%
 	&_4x3
 		padding-bottom 75%
-
-// Правильная картинка при любом формате кадра
-// Классы: ".fit-cover", ".fit-contain"
-.fit
-	&-cover
-	&-contain
-		position absolute
-		top 0
-		bottom 0
-		left 0
-		right 0
-		z-index 2
-		margin auto
-		display block
-		max-width 100%
-		max-height 100%
-
-	&-cover
-		.cssall &
-			height 100%
-			width 100%
-			object-fit cover
-
-	&-contain
-		.cssall &
-			height 100%
-			width 100%
-			object-fit contain
